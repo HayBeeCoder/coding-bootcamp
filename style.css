@@ -1,0 +1,128 @@
+/* /===/Globals/===/ */
+
+:root {}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    background-image: url(images/pattern-curve.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    min-height: 100vh;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    width: 90%;
+    padding-top: 10px;
+}
+
+
+/* |image| */
+
+.img_section {
+    width: 95%;
+    margin: 0 auto;
+    padding: 2em;
+    background-image: url(images/pattern-bg.svg);
+    background-repeat: no-repeat;
+    background-position: top 0 center;
+    background-size: contain;
+}
+
+.img_wrapper {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+}
+
+
+/* button */
+
+.img_buttons {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    border-radius: 50px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .5);
+}
+
+.img_btn {
+    padding: .8em 1.2em;
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+}
+
+.bd-lf {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.bd-rt {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+
+/* |text| */
+
+.testimony_section {
+    text-align: center;
+}
+
+.testimony {
+    padding-top: 1em;
+    margin: 1.4em 0 .8em;
+    background-image: url(images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-position: top 0 center;
+}
+
+.testimony::before {
+    content: open-quote;
+}
+
+.testimony::after {
+    content: close-quote;
+}
+
+.testimony_role {
+    font-weight: lighter;
+}
+
+.margin-sm {
+    margin: .6em 0;
+    line-height: .9;
+}
