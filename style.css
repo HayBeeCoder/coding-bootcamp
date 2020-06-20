@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
 /* /===/Globals/===/ */
 
-
-/* :root {} */
+ :root {
+    --darkBlue: hsl(240, 38%, 20%);
+    --grayishBlue: hsl(240, 18%, 77%);
+}
 
 * {
     box-sizing: border-box;
@@ -9,18 +13,11 @@
 
 body {
     margin: 0;
-    font-size: calc(18px + (22 - 15) * ((100vw - 400px) / ( 800 - 300)));
-    line-height: 1.5;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.65;
     min-height: 100vh;
-}
-
-.attribution {
-    font-size: 11px;
-    text-align: center;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
+    color: var(--darkBlue);
 }
 
 .margin-sm {
@@ -28,17 +25,9 @@ body {
     line-height: .5;
 }
 
-footer {
-    position: relative;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-}
-
 .testimonials {
     padding-top: 1.2em;
-    min-height: 100vh;
+    min-height: 900px;
     background-image: url(images/pattern-curve.svg);
     background-repeat: no-repeat;
     background-position: bottom;
@@ -49,7 +38,7 @@ footer {
     margin: 0 auto;
     width: 90%;
     padding-top: 10px;
-    min-height: 100vh;
+    min-height: 850px;
 }
 
 
@@ -70,7 +59,6 @@ footer {
     width: 100%;
     max-width: 480px;
     margin: 0 auto;
-    /* height: 100%; */
 }
 
 .image {
@@ -125,12 +113,102 @@ footer {
 
 .testimony::before {
     content: open-quote;
+    font-size: 24px;
 }
 
 .testimony::after {
     content: close-quote;
+    font-size: 24px;
 }
 
+.client_role {
+    color: var(--grayishBlue);
+}
+
+
+/* |footer|*/
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: hsl(228, 88%, 97%);
+}
+
+
+/* 
 .role-light {
     font-weight: lighter;
+} */
+
+@media(min-width: 900px) {
+    body {
+        font-size: 20px;
+    }
+    .mg-left {
+        margin-left: .2em;
+    }
+    .testimonials {
+        position: relative;
+        min-height: 800px;
+    }
+    .container {
+        min-height: max-content;
+        width: 85%;
+        margin: 4em auto;
+        padding: 0;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr) 8vw;
+    }
+    .img_section {
+        grid-column: 6/11;
+    }
+    .testimony_section {
+        align-items: center;
+        grid-column: 1/6;
+        grid-row: 1;
+        text-align: left;
+    }
+    .client_role,
+    .client_name {
+        display: inline-block;
+    }
+    h2 {
+        display: inline-block;
+        font-size: 1.2em;
+    }
+    .absolute {
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50%;
+        position: absolute;
+        z-index: 1;
+        /* adding the same amount of margin right to image_section */
+        margin-left: calc(2em + 8vw);
+        /* left: 20%; */
+    }
+    .testimony {
+        padding-top: 0;
+        margin: 0;
+        background-position: top 0 left 10%;
+    }
+    footer {
+        padding: 2.5em;
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+        /* align-self: center; */
+    }
 }
