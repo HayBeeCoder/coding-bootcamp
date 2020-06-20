@@ -84,6 +84,7 @@ body {
     background-color: #fff;
     border: 0;
     cursor: pointer;
+    outline: none;
 }
 
 .bd-lf {
@@ -145,12 +146,6 @@ footer {
     text-align: center;
     background-color: hsl(228, 88%, 97%);
 }
-
-
-/* 
-.role-light {
-    font-weight: lighter;
-} */
 
 @media(min-width: 900px) {
     body {
